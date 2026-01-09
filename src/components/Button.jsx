@@ -1,6 +1,6 @@
 import { Children } from "react";
 
-export const Butoon = ({ className, size, children }) => {
+export const Button = ({ className, size, children }) => {
   return (
     <button>
       <span>{children}</span>
