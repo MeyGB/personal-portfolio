@@ -4,6 +4,7 @@ import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Testimonial } from "@/sections/Testimonial";
 import { Navbar } from "@/layout/Navbar";
+import "devicon/devicon.min.css";
 
 function App() {
   return (
