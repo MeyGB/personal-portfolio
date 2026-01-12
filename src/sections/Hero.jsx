@@ -106,11 +106,12 @@ export const Hero = () => {
             <Button size="lg">
               Contact Me <ArrowRight className="w-5 h-5" />
             </Button>
-
-            <AnimatedBorderButton>
-              <Download className="w-5 h-5" />
-              Download CV
-            </AnimatedBorderButton>
+            <a href="/Boromey_CV.pdf" download="Boromey_CV.pdf">
+              <AnimatedBorderButton>
+                <Download className="w-5 h-5" />
+                CV
+              </AnimatedBorderButton>
+            </a>
           </div>
           {/* Social Linked */}
           <div className="flex items-center gap-4 animate-fade-in animate-delay-400">

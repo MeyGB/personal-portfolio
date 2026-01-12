@@ -67,6 +67,7 @@ export const Navbar = () => {
               <a
                 href={link.href}
                 key={i}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="px-2 py-2 text-sm text-muted-foreground hover:text-foreground"
               >
                 {link.label}
