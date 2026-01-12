@@ -1,4 +1,10 @@
-import { ArrowRight, Download, Github, Facebook } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Facebook,
+  ChevronDown,
+} from "lucide-react";
 import { Button } from "../components/Button";
 /* eslint-disable react-hooks/purity */
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
@@ -129,7 +135,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Column (optional image / illustration) */}
-          <div className="relative animate-fade-in animate-delay-400">
+          <div className="relative animate-fade-in animate-delay-500">
             <div className="relative max-w-md mx-auto">
               <div
                 className="absolute inset-0 
@@ -154,7 +160,7 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Status Badge */}
-                <div className="absolute -top-4 -left-4 animate-float glass rounded-md px-2 py-3 animate-delay-500">
+                <div className="absolute -top-4 -left-4 animate-float glass rounded-md px-2 py-3 animate-delay-600">
                   <div className="text-2xl font-bold text-primary">2+</div>
                   <div className="text-sm text-muted-foreground">Years Exp</div>
                 </div>
@@ -163,21 +169,21 @@ export const Hero = () => {
           </div>
         </div>
         {/* Skill Selection */}
-        <div className="mt-20 animate-fade-in animate-delay-600">
+        <div className="mt-20 animate-fade-in animate-delay-700">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-marquee">
+          <div className="relative overflow-hidden w-full">
+            <div className="flex w-max whitespace-nowrap animate-marquee">
               {[...skills, ...skills].map((skill, i) => (
                 <div
                   key={i}
-                  className="flex-shrink-0 py-4 px-8 flex items-center gap-3"
+                  className="flex items-center gap-3 flex-shrink-0 px-8 py-4"
                 >
                   <i
                     className={`${skillIcons[skill]} colored text-2xl`}
                     title={skill}
-                  ></i>
+                  />
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
@@ -186,6 +192,15 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );

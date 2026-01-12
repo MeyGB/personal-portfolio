@@ -53,7 +53,8 @@
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--color-border) 60%, transparent);
   }
 
   .glow-text {
@@ -126,7 +127,10 @@
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 40s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
   }
 
   .animation-delay-100 {
