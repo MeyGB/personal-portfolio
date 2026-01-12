@@ -91,7 +91,7 @@ export const Hero = () => {
             </div>
 
             <h1 className="text-5xl font-bold text-white animate-fade-in animation-delay-100">
-              Hi, I’m Ouk Boromey
+              Hi, I’m Mey!
             </h1>
 
             <p className="text-lg text-white/80 animate-fade-in animation-delay-200">
