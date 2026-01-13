@@ -7,7 +7,18 @@ const experiences = [
     company: "ESTC",
     description:
       "Developing and maintaining modern web applications with a focus on performance, scalability, and clean UI architecture.",
-    technology: ["React", "TailwindCSS", "Node.js"],
+    technology: [
+      "React & RN",
+      "Vue",
+      "TailwindCSS",
+      "SQL",
+      "Postgres",
+      "Linux",
+      "Supabase",
+      "Appwrite",
+      "Node.js",
+      "֎ Chat GPT",
+    ],
     current: true,
   },
   {
@@ -16,14 +27,20 @@ const experiences = [
     company: "ESTC",
     description:
       "Provided technical support, assisted in debugging issues, and helped maintain internal systems and codebases.",
-    technology: ["JavaScript", "System Support", "Networking"],
+    technology: ["JavaScript", "Vue", "System Support", "Networking"],
     current: false,
   },
 ];
 
 const techIcons = {
-  React: "devicon-react-original colored",
+  "React & RN": "devicon-react-original colored",
+  Vue: "devicon-vuejs-plain colored",
   TailwindCSS: "devicon-tailwindcss-plain colored",
+  SQL: "devicon-azuresqldatabase-plain colored",
+  Postgres: "devicon-postgresql-plain colored",
+  Supabase: "devicon-supabase-plain colored",
+  Appwrite: "devicon-appwrite-original colored",
+  Linux: "devicon-linux-plain",
   "Node.js": "devicon-nodejs-plain colored",
   JavaScript: "devicon-javascript-plain colored",
   Networking: "devicon-networkx-plain colored",
