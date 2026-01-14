@@ -31,7 +31,11 @@ export const Navbar = () => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          BN.
+          <img
+            src="/logo/logo_teals.png"
+            className="w-22 transition-transform duration-500 hover:scale-105"
+          />
+          {/* BN */}
         </a>
         {/* Desktop Screen */}
         <div className="hidden md:flex items-center gap-1">

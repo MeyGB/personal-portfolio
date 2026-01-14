@@ -3,6 +3,7 @@ import { About } from "@/sections/About";
 import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Testimonial } from "@/sections/Testimonial";
+import { Contact } from "@/sections/Contact";
 import { Navbar } from "@/layout/Navbar";
 import "devicon/devicon.min.css";
 
@@ -16,6 +17,7 @@ function App() {
         <Projects />
         <Experience />
         <Testimonial />
+        <Contact />
       </main>
     </div>
   );
