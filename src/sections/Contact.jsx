@@ -5,9 +5,10 @@ import {
   MapPin,
   Phone,
   Send,
+  Timer,
 } from "lucide-react";
 import { Button } from "@/components/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const contactInfo = [
@@ -32,7 +33,7 @@ const contactInfo = [
   {
     label: "Location",
     value: "Siem Reap / Cambodia",
-    href: "#",
+    href: "https://maps.app.goo.gl/WqeroaK6L5FiNFWPA",
     icon: MapPin,
   },
 ];
@@ -42,17 +43,27 @@ export const Contact = () => {
     name: "",
     email: "",
     message: "",
+    time: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({
     type: null,
     message: "",
   });
+  useEffect(() => {
+    if (submitStatus.type === "success") {
+      const time = setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 5000);
+      return () => clearTimeout(time);
+    }
+  }, [submitStatus.type]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
+    const currendatetime = new Date().toLocaleString();
 
     try {
       const serviceId = import.meta.env.VITE_EMAIL_JS_SERVICE_ID;
@@ -70,6 +81,7 @@ export const Contact = () => {
           name: formData.name,
           email: formData.email,
           message: formData.message,
+          time: currendatetime,
         },
         publicKey
       );
@@ -222,30 +234,60 @@ export const Contact = () => {
           </div>
 
           {/* Contact Info Cards */}
-          <div className="flex flex-col gap-6 animate-fade-in animate-delay-400">
-            {contactInfo.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target={item.label === "Telegram" ? "_blank" : undefined}
-                rel={
-                  item.label === "Telegram" ? "noopener noreferrer" : undefined
-                }
-                className="flex items-center gap-4 group rounded-xl p-4 hover:bg-primary/5 transition-all"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 transition">
-                  <item.icon className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-sm text-muted-foreground">
-                    {item.label}
-                  </span>
-                  <span className="font-medium group-hover:text-primary transition">
-                    {item.value}
-                  </span>
-                </div>
-              </a>
-            ))}
+          <div className="flex flex-col gap-4">
+            {/* Contact Info Card */}
+            <div className="flex flex-col gap-4 glass border border-primary/30 rounded-3xl p-2 animate-fade-in animate-delay-400">
+              <h2 className="text-2xl font-medium font-serif text-center mt-3">
+                <span className="italic text-primary">Contact</span>{" "}
+                <span className="text-white not-italic">Info</span>
+              </h2>
+
+              {/* Contact Items */}
+              <div className="flex flex-col ">
+                {contactInfo.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target={
+                      item.label === "Telegram" || "Location"
+                        ? "_blank"
+                        : undefined
+                    }
+                    rel={
+                      item.label === "Telegram"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-primary/5 transition-all"
+                  >
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 transition">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm text-muted-foreground">
+                        {item.label}
+                      </span>
+                      <span className="font-medium group-hover:text-primary transition">
+                        {item.value}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Currently Available Card */}
+            <div className="glass rounded-3xl p-6 border border-primary/30 animate-fade-in animate-delay-500">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="font-medium">Currently Available</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                I’m ready to take on new challenges and collaborate on exciting
+                projects. Whether it’s a full-time role or freelance work, I’d
+                love to connect and discuss ideas!
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { Testimonial } from "@/sections/Testimonial";
 import { Contact } from "@/sections/Contact";
 import { Navbar } from "@/layout/Navbar";
 import "devicon/devicon.min.css";
+import { Footer } from "./layout/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Testimonial />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
