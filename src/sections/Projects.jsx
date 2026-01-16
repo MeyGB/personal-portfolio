@@ -16,8 +16,8 @@ const projects = [
     description: "A mobile app to track expenses and manage finances.",
     tag: ["React Native", "Expo", "NodeJS"],
     image: "./projects/01.png",
-    link: "#",
-    github: "#",
+    link: "",
+    github: "https://github.com/MeyGB",
   },
   //   {
   //     title: "Budget Manager",
@@ -77,9 +77,8 @@ export const Projects = () => {
                 {/* Center Overlay Links */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#comingsoon..."
+                    target="_self"
                     className="flex items-center justify-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full shadow-lg hover:bg-primary/100 transition-all"
                   >
                     <ExternalLink className="w-5 h-5" /> Live
@@ -119,7 +118,7 @@ export const Projects = () => {
                   {project.tag.map((t, i) => (
                     <span
                       key={i}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-primary/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
                     >
                       {t}
                     </span>

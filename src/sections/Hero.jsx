@@ -51,7 +51,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="./space01.jpg"
+          src="./sp01.webp"
           alt="Hero Image"
           className="w-full h-full object-cover opacity-50"
         />
