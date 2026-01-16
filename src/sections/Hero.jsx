@@ -51,7 +51,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="./spaces.jpg"
+          src="./space01.jpg"
           alt="Hero Image"
           className="w-full h-full object-cover opacity-50"
         />
@@ -147,7 +147,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/mey.png"
+                  src="/meycgi.png"
                   alt="Ouk Boromey"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
