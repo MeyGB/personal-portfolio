@@ -51,7 +51,7 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="./sp01.webp"
+          src="https://meytech.online/root/bg.webp"
           alt="Hero Image"
           className="w-full h-full object-cover opacity-50"
         />
@@ -105,7 +105,10 @@ export const Hero = () => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
             </a>
-            <a href="/Boromey_CV.pdf" download="Boromey_CV.pdf">
+            <a
+              href="https://meytech.online/root/Boromey_CV.pdf"
+              download="Boromey_CV.pdf"
+            >
               <div className="text-center animate-fade-in animate-delay-400">
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
@@ -147,9 +150,10 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/meycgi.png"
+                  src="https://meytech.online/root/bnai01.png"
                   alt="Ouk Boromey"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  loading="lazy"
                 />
                 {/* Floating Bage */}
 
